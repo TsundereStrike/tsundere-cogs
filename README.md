@@ -4,9 +4,13 @@ Random cogs repository for [Red-DiscordBot](https://github.com/Twentysix26/Red-D
 
 will update as cogs are added
 
-# installation
-Meant to be used with Red's downloader by adding it with:
+# install
+Replace [p] with your bot's prefix and use these commands:
 
 ```python
 [p]cog repo add tsundere-cogs https://github.com/TsundereStrike/tsundere-cogs
+```
+
+```python
+[p]cog install Scarlet-Cogs pepe
 ```

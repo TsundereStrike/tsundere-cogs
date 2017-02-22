@@ -16,6 +16,13 @@ e.g. with Python3
 pip3 install beautifulsoup4
 ```
 
+Install feedparser for the MWO cog:
+
+```python
+e.g. with Python3
+pip3 install feedparser
+```
+
 
 Install dropbox for the Upload cog (when it is ready):
 

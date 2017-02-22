@@ -2,8 +2,10 @@
 
 Random cogs repository for [Red-DiscordBot](https://github.com/Twentysix26/Red-DiscordBot) 
 
-will update as cogs are added
+**will update as cogs are added**
+
 MWO cog works but will be updated to pull in more information
+
 Upload cog does not work, it is a WIP. Do not install this cog.
 
 # pre-reqs

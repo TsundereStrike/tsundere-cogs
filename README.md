@@ -12,5 +12,5 @@ Replace [p] with your bot's prefix and use these commands:
 ```
 
 ```python
-[p]cog install Scarlet-Cogs pepe
+[p]cog install tsundere-cogs cog-folder-name
 ```

@@ -8,5 +8,5 @@ will update as cogs are added
 Meant to be used with Red's downloader by adding it with:
 
 ```python
-[p]cog repo add tsundere-cogs https://github.com/erinbamberger/tsundere-cogs
+[p]cog repo add tsundere-cogs https://github.com/TsundereStrike/tsundere-cogs
 ```

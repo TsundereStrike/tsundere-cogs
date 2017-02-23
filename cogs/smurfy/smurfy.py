@@ -90,4 +90,4 @@ class Smurfy:
             
 
 def setup(bot):
-    bot.add_cog(Mwo(bot))
+    bot.add_cog(Smurfy(bot))

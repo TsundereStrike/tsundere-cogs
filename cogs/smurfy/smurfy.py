@@ -88,7 +88,19 @@ class Smurfy:
         url8 = "http:/mwo.smurfy-net.de/api/data/mechs/415/loadouts/75a1ea4fcf79e1c24216b1db218a47e6f9888309.json?print=pretty"
         list8 = json.load(urllib2.urlopen(url8))
         await self.bot.say(list8)
-            
 
+def check_folders():
+    if not os.path.exists("data/smurfy"):
+        print("Creating data/smurfy folder...")
+        os.makedirs("data/smurfy")
+
+def check_files():
+    system = {"apiKey": ""}
+
+    f = "data/smurfy/credentials.json"
+    if not dataIO.is_valid_json(f):
+        print("Adding smurfy credentials.json...")
+        dataIO.save_json(f, system)
+            
 def setup(bot):
     bot.add_cog(Smurfy(bot))

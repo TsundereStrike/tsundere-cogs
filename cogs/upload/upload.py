@@ -5,9 +5,9 @@ from discord.ext import commands
 # Add OAuth2 access token here. 
 # You can generate one for yourself in the App Console.
 # See <https://blogs.dropbox.com/developers/2014/05/generate-an-access-token-for-your-own-account/>
-app_key = 'cqtsga6dbbiqv3j'
-app_secret = 'ptie34fauz99fyh'
-access_token = 'nKb4YctOY-AAAAAAAAAAHrZW7tIguZW3r2KcSUTikN1856sUOzyahv1dp8pGZADW'
+app_key = ''
+app_secret = ''
+access_token = ''
 
 class Upload:
     """Uploading stuff"""

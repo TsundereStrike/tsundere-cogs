@@ -12,32 +12,14 @@ class Smurfy:
 
     @commands.command()
     async def smurfy(self):
-
-        """/pricelist"""
-        """Request price list of almost all in-game objects (mechs, items..)"""
-
-        """/modulelist"""
-        """Request list of modules"""
-
-        """/weaponlist"""
-        """Request list of weapons"""
-
-        """/ammolist"""
-        """Request list of ammo"""
-
-        """/omnipodlist"""
-        """Request list of omnipods"""
-
-        """/mechlist"""
-        """Request list of mechs"""
-
-        """/mechbyid"""
-        """(work in progress)"""
-        """Request a specific mech by id"""
-
-        """/mechloadout"""
-        """(work in progress)"""
-        """Request a mech loadout by ids"""
+        await self.bot.say("```/pricelist   - Request price list of almost all in-game objects (mechs, items..)```")
+        await self.bot.say("```/modulelist  - Request list of modules```")
+        await self.bot.say("```/weaponlist  - Request list of weapons```")
+        await self.bot.say("```/ammolist    - Request list of ammo```")
+        await self.bot.say("```/omnipodlist - Request list of omnipods```")
+        await self.bot.say("```/mechlist    - Request list of mechs```")
+        await self.bot.say("```/mechbyid    - (work in progress) - Request a specific mech by id```")
+        await self.bot.say("```/mechloadout - (work in progress) - Request a mech loadout by ids```")
 
     @commands.command()
     async def pricelist(self):

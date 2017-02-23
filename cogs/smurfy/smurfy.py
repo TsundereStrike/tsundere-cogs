@@ -1,12 +1,7 @@
 import os
 import discord
 from discord.ext import commands
-from .utils.dataIO import dataIO
 import requests
-
-# You must enter your api key here, to generate a new key visit: http:/mwo.smurfy-net.de/change-password
-# Once registered and authenticated visiting that URL will allow you to generate a new api key
-smurfy_access_token = ''
 
 class Smurfy:
 
@@ -14,20 +9,35 @@ class Smurfy:
     
     def __init__(self, bot):
         self.bot = bot
-        self.file_path = "data/smurfy/credentials.json"
-        self.credentials = dataIO.load_json(self.file_path)
 
-    @commands.command(pass_context=True)
-    async def smurfy(self, ctx):
-        """Sets your Smurfy API key that you generated from the website: http:/mwo.smurfy-net.de/change-password"""
-        await self.bot.whisper("Type your api key. You can reply in this private msg")
-        access_token = await self.bot.wait_for_message(timeout=15, author=ctx.message.author)
-        if access_token is None:
-            return
-        else:
-            self.credentials["apiKey"] = access_token.content
-            dataIO.save_json(self.file_path, self.credentials)
-            await self.bot.whisper("Setup complete. API key added. Type /help smurfy to learn more.")
+    @commands.command()
+    async def smurfy(self):
+
+        """/pricelist"""
+        """Request price list of almost all in-game objects (mechs, items..)"""
+
+        """/modulelist"""
+        """Request list of modules"""
+
+        """/weaponlist"""
+        """Request list of weapons"""
+
+        """/ammolist"""
+        """Request list of ammo"""
+
+        """/omnipodlist"""
+        """Request list of omnipods"""
+
+        """/mechlist"""
+        """Request list of mechs"""
+
+        """/mechbyid"""
+        """(work in progress)"""
+        """Request a specific mech by id"""
+
+        """/mechloadout"""
+        """(work in progress)"""
+        """Request a mech loadout by ids"""
 
     @commands.command()
     async def pricelist(self):
@@ -89,21 +99,6 @@ class Smurfy:
         url8 = "http:/mwo.smurfy-net.de/api/data/mechs/415/loadouts/75a1ea4fcf79e1c24216b1db218a47e6f9888309.json?print=pretty"
         list8 = json.load(urllib2.urlopen(url8))
         await self.bot.say(list8)
-
-def check_folders():
-    if not os.path.exists("data/smurfy"):
-        print("Creating data/smurfy folder...")
-        os.makedirs("data/smurfy")
-
-def check_files():
-    system = {"apiKey": ""}
-
-    f = "data/smurfy/credentials.json"
-    if not dataIO.is_valid_json(f):
-        print("Adding smurfy credentials.json...")
-        dataIO.save_json(f, system)
             
 def setup(bot):
-    check_folders()
-    check_files()
     bot.add_cog(Smurfy(bot))

@@ -1,3 +1,4 @@
+import os
 import discord
 from discord.ext import commands
 from .utils.dataIO import dataIO
@@ -17,7 +18,7 @@ class Smurfy:
         self.credentials = dataIO.load_json(self.file_path)
 
     @commands.command(pass_context=True)
-    async def smurfyset(self, ctx):
+    async def smurfy(self, ctx):
         """Sets your Smurfy API key that you generated from the website: http:/mwo.smurfy-net.de/change-password"""
         await self.bot.whisper("Type your api key. You can reply in this private msg")
         access_token = await self.bot.wait_for_message(timeout=15, author=ctx.message.author)

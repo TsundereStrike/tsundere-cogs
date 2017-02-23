@@ -103,4 +103,6 @@ def check_files():
         dataIO.save_json(f, system)
             
 def setup(bot):
+    check_folders()
+    check_files()
     bot.add_cog(Smurfy(bot))
